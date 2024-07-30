@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Contact</title>
+
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+   <!-- My CSS -->
+   <link rel="stylesheet" href="/public/css/style.css">
+
+</head>
+<body>
+
+    <header class="header">
+        <div class="flex">  
+           <a href="#" class="logo"> <i class="fas fa-shopping-basket"></i> Ishant <span>Nimje</span> </a>
+        </div>
+    </header>
+
+    <div class="heading">
+        <h1>Contact us</h1>
+    </div>
+
+    <section class="contact">
+    
+        <div class="row">
+
+            <div class="leftrow">
+                <h1>Talk with us</h1>
+                <div class="icons">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Our Email</h3>
+                    <p>nimjeishant3@gmail.com</p>
+                </div>
+        
+                <div class="icons">
+                    <i class="fas fa-phone"></i>
+                    <h3>Our Number</h3>
+                    <p>+123-456-7890</p>
+                </div>
+            </div>
+
+
+            <form id="contactForm">
+                <h3>Get In Touch</h3>
+                <div class="inputBox">
+                    <input type="text" placeholder="Enter Your First Name" id="firstName" class="box" required>
+                    <input type="text" placeholder="Enter Your Last Name" id="lastName" class="box" required>
+                </div>
+                <div class="inputBox">
+                    <input type="tel" placeholder="Enter Your Phone No." id="phoneNumber" class="box" required>
+                    <select id="country" aria-placeholder="Select country" class="box1" required>
+                        <option value="">Select Country</option>
+                        <option value="India">India</option>
+                        <option value="USA">USA</option>
+                        <option value="Germany">Germany</option>
+                        <!-- Add more countries as needed -->
+                    </select>
+                </div>
+                <textarea placeholder="What would you like to discuss?" id="discussion" cols="30" rows="10" required></textarea>
+                <input type="submit" value="Send Message" class="btn" name="send">
+            </form>
+    
+            
+        </div>
+    
+    </section>
+
+    <footer class="credit">Created by <span> @ishant_nimje.</span> All Rights Reserved!</footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const formData = {
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                phoneNumber: document.getElementById('phoneNumber').value,
+                country: document.getElementById('country').value,
+                discussion: document.getElementById('discussion').value
+            };
+
+            const response = await fetch('http://localhost:5000/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+
+            if (response.ok) {
+                alert('Form submitted successfully');
+            } else {
+                alert('Error submitting form');
+            }
+        });
+    </script>
+
+</body>
+</html>

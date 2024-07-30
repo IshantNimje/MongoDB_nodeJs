@@ -1,0 +1,201 @@
+*{
+    font-family: 'Poppins' , sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+    color:#130f40;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+.btn {
+    padding: .8rem 3rem;
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    border: .2rem solid #130f40;
+    border-radius: .5rem;
+    color: #130f40;
+    cursor: pointer;
+    background: none;
+}
+
+.btn:hover {
+    background: green;
+    color: #fff;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+section {
+    padding: 3rem 9%;
+    margin: 0 auto;
+}
+
+.header .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    position: relative;
+}
+
+
+.header .logo i {
+    color: green;
+    padding-right: .5rem;
+}
+
+.header .flex .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: #130f40;
+}
+
+.header .flex .logo span {
+    color: green;
+}
+
+.heading {
+    background:url(b1.jpeg) no-repeat;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding-top: 12rem;
+    padding-bottom: 8rem;
+}
+
+.heading h1 {
+    color: #222;
+    font-size: 4rem;
+}
+
+.leftrow {
+    width: 40%;
+    padding: 1.5rem;
+    text-align: center;
+    align-content: space-around;
+    border: 0.1rem solid rgb(0 0 0 / 33%);
+    border-radius: 10px;
+}
+
+.leftrow h1{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.icons {
+    text-align: center;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 2rem;
+    margin: 8px;
+    background-color: #F1F3F4;
+}
+
+.icons i {
+    height: 6rem;
+    width: 6rem;
+    line-height: 6rem;
+    font-size: 2.5rem;
+    background: green;
+    color: #fff;
+    border-radius: 50%;
+}
+
+.icons h3 {
+    color: #222;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+.icons p {
+    color: #666;
+    font-size: 1.5rem;
+    line-height: 2;
+}
+
+.contact .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.contact .row form {
+    padding: 2rem;
+    flex: 1 1 40rem;
+    border-radius: 10px;
+    border: 0.1rem solid rgb(0 0 0 / 33%);
+}
+
+.contact .row form h3 {
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+    color: #222;
+}
+
+.contact .row form .inputBox {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact .row form textarea {
+    width: 100%;
+    height: 15rem;
+    resize: none;
+}
+
+.contact .row form .inputBox .box, .contact .row form textarea {
+    padding: 1.5rem 1.2rem;
+    font-size: 1.6rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.2);
+    color: #222;
+    text-transform: none;
+    margin: .7rem 0;
+}
+
+.contact .row form .inputBox .box1{
+    padding: 1rem;
+    font-size: 1.6rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    margin-left: auto;
+    width: 32%;
+    color: #222;
+    margin-top: .7rem;
+    margin-bottom: .7rem;
+}
+
+.credit {
+    text-align: center;
+    background: #fff;
+    color: var(--black);
+    font-size: 2rem;
+    height: 70px;
+    padding-top: 20px;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+}
+
+.credit span {
+    color: green;
+}
