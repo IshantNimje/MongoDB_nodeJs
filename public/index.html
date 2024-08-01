@@ -41,7 +41,7 @@
                 <div class="icons">
                     <i class="fas fa-phone"></i>
                     <h3>Our Number</h3>
-                    <p>+91-7387398334</p>
+                    <p>+123-456-7890</p>
                 </div>
             </div>
 
@@ -85,7 +85,7 @@
                 discussion: document.getElementById('discussion').value
             };
 
-            const response = await fetch('http://localhost:5000/api/contact', {
+            const response = await fetch('/api/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
