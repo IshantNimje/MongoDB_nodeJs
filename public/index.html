@@ -85,7 +85,7 @@
                 discussion: document.getElementById('discussion').value
             };
 
-            const response = await fetch('/api/contact', {
+            const response = await fetch('https://mongo-db-node-js-orpin.vercel.app/api/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
